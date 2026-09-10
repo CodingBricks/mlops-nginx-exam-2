@@ -20,3 +20,12 @@ run-api:
 stop-api:
 	docker stop senti-api-v1
 	docker stop senti-api-v2
+
+start-project:
+	docker compose -p mlops up -d --build
+
+stop-project:
+	docker compose -p mlops down
+
+test:
+	bash tests/run_tests.sh
